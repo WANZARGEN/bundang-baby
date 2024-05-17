@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[프로젝트 로드맵](https://shorthaired-backpack-cee.notion.site/Bundang-Baby-64e04f5d3a7a4ca6a83758eed5145444?pvs=4)
 
 ## Getting Started
 
