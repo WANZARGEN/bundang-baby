@@ -10,6 +10,13 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
+  > main {
+    padding: 1rem;
+  }
+}
+
+h2 {
+  @apply text-2xl font-bold mb-4 mt-2;
 }
 
 @layer utilities {

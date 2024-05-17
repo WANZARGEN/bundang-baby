@@ -2,18 +2,18 @@
 
 import { useRouter } from 'next/navigation'
 
-export default function SignUp() {
+export default function FavoriteList() {
   const router = useRouter();
   return (
     <>
-    <h2>Sign Up</h2>
+    <h2>Favorite List</h2>
     <button type="button" onClick={() => router.back()}>
       Back
     </button>
     <br />
-    <button type="button" onClick={() => router.push('/facility/search')}>
-      Sign Up
-    </button>
+    <div onClick={() => router.push('/facility/facility-details/2')}>
+       Favorite 1 - Facility 2
+    </div>
     </>
   );
 }
