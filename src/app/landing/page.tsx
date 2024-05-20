@@ -1,6 +1,11 @@
+import Link from "next/link";
+
 export default function Landing() {
     return (
-      <>Hello 분당 베이비!</>
+      <>
+      <h2>Welcome to BunBeBe</h2>
+      <Link href="/auth/sign-in">Sign In</Link>
+      </>
     );
   }
   
