@@ -9,7 +9,7 @@ interface Props {
 
 export default function PopUpTopNavBar({ title, onDiscard }: Props) {
   const router = useRouter();
-  const onClickDiscard = () => {
+  const handleClickDiscard = () => {
     if (onDiscard) {
       onDiscard();
     }
@@ -18,7 +18,7 @@ export default function PopUpTopNavBar({ title, onDiscard }: Props) {
   return (
     <div className="pop-up-top-nav-bar">
       <h2>{title}</h2>
-    <button type="button" onClick={onClickDiscard}>
+    <button type="button" onClick={handleClickDiscard}>
       Discard
     </button>
     </div>
