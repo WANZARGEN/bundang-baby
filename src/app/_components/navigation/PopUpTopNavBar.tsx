@@ -11,9 +11,9 @@ export default function PopUpTopNavBar({ title }: Props) {
   return (
     <div className="pop-up-top-nav-bar">
       <h2>{title}</h2>
-    <button type="button" onClick={() => router.back()}>
-      Discard
-    </button>
+      <button type="button" onClick={() => router.back()}>
+        Discard
+      </button>
     </div>
   );
 }
