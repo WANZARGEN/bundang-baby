@@ -10,8 +10,7 @@ const Button = (props: Props) => {
   const { onClick, children, className = '' } = props;
   return (
     <button
-      className={`cursor-pointer inline-flex justify-center items-center 
-      border-0 box-border text-white bg-pink-200 outline-none rounded-lg p-2 
+      className={`box-border inline-flex cursor-pointer items-center justify-center 
       ${className}`}
       onClick={onClick}
     >

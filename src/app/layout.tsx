@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "BunBeBe",
-  description: "Provides information about baby care facilities in Bundang.",
+  title: 'BunBeBe',
+  description: 'Provides information about baby care facilities in Bundang.',
 };
 
 export default function RootLayout({
@@ -13,8 +13,8 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body>
-        <main>{children}</main>
+      <body className="flex h-screen flex-col items-center">
+        <main className="w-screen max-w-screen-sm">{children}</main>
       </body>
     </html>
   );
