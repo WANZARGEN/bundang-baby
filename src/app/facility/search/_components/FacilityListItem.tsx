@@ -6,7 +6,7 @@ export default function FacilityListItem({
   id: string;
 }>) {
   return (
-    <Link href={`/facility/facility-details/${id}`} className="block border border-gray-300 p-4 mb-4">
+    <Link href={`/facility/facility-details/${id}`} className="mb-4 block border border-gray-300 p-4">
       <div className="text-sm">{id}</div>
     </Link>
   );

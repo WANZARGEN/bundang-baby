@@ -1,10 +1,10 @@
 'use client';
 
-import { MdBabyChangingStation, MdOutlineFamilyRestroom, MdOutlineStroller } from "react-icons/md";
-import { FaPersonBreastfeeding } from "react-icons/fa6";
-import { useState } from "react";
+import { MdBabyChangingStation, MdOutlineFamilyRestroom, MdOutlineStroller } from 'react-icons/md';
+import { FaPersonBreastfeeding } from 'react-icons/fa6';
+import { useState } from 'react';
 
-type SearchFilterType = 'stroller'|'babyChanging'|'breastFeeding'|'familyRestroom';
+type SearchFilterType = 'stroller' | 'babyChanging' | 'breastFeeding' | 'familyRestroom';
 export default function SearchFilterButton({
   type,
   onClick,
@@ -22,11 +22,10 @@ export default function SearchFilterButton({
   return (
     <>
       <button
-        className={`cursor-pointer inline-flex justify-center items-center box-border p-1 h-8 w-8 align-middle
-        border rounded-lg border-gray-300
-        bg-white text-gray-500
-        hover:bg-gray-100 hover:text-gray-700 hover:border-gray-400
-        ${isActivated ? '!bg-gray-500 !text-white !border-0' : ''}
+        className={`box-border inline-flex h-8 w-8 cursor-pointer items-center justify-center 
+        rounded-lg border border-gray-300 bg-white p-1 align-middle text-gray-500 
+        hover:border-gray-400 hover:bg-gray-100 hover:text-gray-700
+        ${isActivated ? '!border-0 !bg-gray-500 !text-white' : ''}
         ${className}`}
         onClick={handleClick}
       >
