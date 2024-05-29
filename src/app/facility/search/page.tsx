@@ -1,21 +1,24 @@
-'use client'
+'use server';
+import FacilityListItem from './_components/FacilityListItem';
+import SearchBar from '@/app/facility/search/_components/SearchBar';
+import SearchFilterButton from '@/app/facility/search/_components/SearchFilterButton';
 
-import { useRouter } from 'next/navigation'
-
-export default function Search() {
-  const router = useRouter();
+export default async function SearchPage() {
   return (
     <>
-    <h2>Search</h2>
-    <button type="button" onClick={() => router.push('/settings')}>
-      Settings
-    </button>
-    <div onClick={() => router.push('/facility/facility-details/1')}>
-      Facility 1
-    </div>
-    <div onClick={() => router.push('/facility/facility-details/2')}>
-      Facility 2
-    </div>
+      <SearchBar />
+      <div className='flex flex-wrap gap-2 my-3'>
+        <SearchFilterButton type="stroller" />
+        <SearchFilterButton type="babyChanging" />
+        <SearchFilterButton type="breastFeeding" />
+        <SearchFilterButton type="familyRestroom" />
+      </div>
+      <div className="flex flex-col w-full">
+        <FacilityListItem id="1" />
+        <FacilityListItem id="2" />
+        <FacilityListItem id="2" />
+        ...
+      </div>
     </>
   );
 }
