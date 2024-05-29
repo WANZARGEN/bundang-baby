@@ -19,13 +19,14 @@ export default function SearchFilterButton({
     setIsActivated(!isActivated);
     onClick && onClick(e);
   };
+  const activatedClassName = '!border-0 !bg-gray-500 !text-white';
   return (
     <>
       <button
         className={`box-border inline-flex h-8 w-8 cursor-pointer items-center justify-center 
         rounded-lg border border-gray-300 bg-white p-1 align-middle text-gray-500 
         hover:border-gray-400 hover:bg-gray-100 hover:text-gray-700
-        ${isActivated ? '!border-0 !bg-gray-500 !text-white' : ''}
+        ${isActivated ? activatedClassName : ''}
         ${className}`}
         onClick={handleClick}
       >
