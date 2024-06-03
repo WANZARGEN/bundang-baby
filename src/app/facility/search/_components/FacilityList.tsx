@@ -1,3 +1,4 @@
+'use server';
 import { Facility } from '@/database/schema/facility';
 import FacilityListItem from '@/app/facility/search/_components/FacilityListItem';
 
