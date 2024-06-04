@@ -1,7 +1,7 @@
 'use server';
-import FacilityListItem from './_components/FacilityListItem';
 import SearchBar from '@/app/facility/search/_components/SearchBar';
 import SearchFilterButton from '@/app/facility/search/_components/SearchFilterButton';
+import FacilityList from '@/app/facility/search/_components/FacilityList';
 
 export default async function SearchPage() {
   return (
@@ -13,12 +13,7 @@ export default async function SearchPage() {
         <SearchFilterButton type="breastFeeding" />
         <SearchFilterButton type="familyRestroom" />
       </div>
-      <div className="flex w-full flex-col">
-        <FacilityListItem id="1" />
-        <FacilityListItem id="2" />
-        <FacilityListItem id="2" />
-        ...
-      </div>
+      <FacilityList />
     </>
   );
 }
