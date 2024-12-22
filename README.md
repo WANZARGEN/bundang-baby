@@ -1,17 +1,9 @@
-[프로젝트 로드맵](https://shorthaired-backpack-cee.notion.site/Bundang-Baby-64e04f5d3a7a4ca6a83758eed5145444?pvs=4)
-
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
