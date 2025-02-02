@@ -1,35 +1,24 @@
-import { Entity, Table } from 'dynamodb-toolbox';
-import { DocumentClient } from '@/database/ddbDocClient';
-
-// Instantiate a table
-const FacilityTable = new Table({
-  // Specify table name (used by DynamoDB)
+import { Entity, schema, TransformedItem } from 'dynamodb-toolbox';
+import { string } from 'dynamodb-toolbox/attributes/string';
+import { AppDataTable } from '@/database/table/appDataTable';
+// Facility Entity
+export const FacilityEntity = new Entity({
   name: 'Facility',
-
-  // Define partition and sort keys
-  partitionKey: 'pk',
-  sortKey: 'sk',
-
-  // Add the DocumentClient
-  DocumentClient,
+  table: AppDataTable,
+  schema: schema({
+    facilityId: string().key(),
+    name: string().required(),
+    location: string(),
+    description: string(),
+  }),
+  computeKey: ({ facilityId }) => ({
+    pk: `FACILITIES`,
+    sk: `FACILITY#${facilityId}`,
+  }),
+  timestamps: {
+    created: true,
+    modified: true,
+  },
 });
 
-const Facility = new Entity({
-  // Specify entity name
-  name: 'Facility',
-
-  // Define attributes
-  attributes: {
-    facilityId: { partitionKey: true },
-    sk: { hidden: true, sortKey: true },
-    name: { type: 'string' },
-    // TODO: Add more attributes
-  },
-
-  // Assign it to our table
-  table: FacilityTable,
-
-  // In Typescript, the "as const" statement is needed for type inference
-} as const);
-
-export { FacilityTable, Facility };
+export type Facility = TransformedItem<typeof FacilityEntity>;

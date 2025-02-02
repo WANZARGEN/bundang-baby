@@ -1,6 +1,7 @@
-import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
-import { ddbClient } from "./dbconfig";
+import { DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
+import { ddbClient } from './dbconfig';
 
+// INFO: marshall: Converts a regular object to DynamoDB format.
 const marshallOptions = {
   // Whether to automatically convert empty strings, blobs, and sets to `null`.
   convertEmptyValues: false,
@@ -10,6 +11,7 @@ const marshallOptions = {
   convertClassInstanceToMap: false,
 };
 
+// INFO: unmarshall: Converts DynamoDB format to a regular object.
 const unmarshallOptions = {
   // Whether to return numbers as a string instead of converting them to native JavaScript numbers.
   wrapNumbers: false,
