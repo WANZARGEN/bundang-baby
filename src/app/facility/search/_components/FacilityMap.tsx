@@ -9,7 +9,7 @@ export function FacilityMap() {
     const kakao = (window as any).kakao;
     kakao.maps.load(() => {
       const options = {
-        center: new kakao.maps.LatLng(37.402056,127.108212),
+        center: new kakao.maps.LatLng(37.402056, 127.108212),
         level: 3,
       };
       const map = new kakao.maps.Map(container.current, options);
